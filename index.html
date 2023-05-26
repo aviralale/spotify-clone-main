@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap" rel="stylesheet">
+
+    <title>Spotify</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="sidebar" class="sidebar">
+            <ul>
+                <li class="logo"><a href=""><i class="fa-brands fa-spotify"></i>Spotify</a></li>
+                <div class="sidenav">
+                    <li class="home-search-library"><a href=""><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li class="home-search-library"><a href=""><i
+                                class="fa-sharp fa-solid fa-magnifying-glass"></i>Search</a></li>
+                    <li class="home-search-library"><a href=""><i class="fa-solid fa-compact-disc"></i>Your Library</a>
+                    </li>
+                </div>
+                <div class="user-options">
+                    <li class="home-search-library"><a href=""><i class="fa-regular fa-square-plus"></i>Create
+                            Playlist</a>
+                    </li>
+                    <li class="home-search-library"><a href=""><i class="fa-regular fa-heart"></i>Liked Songs</a></li>
+                    <li class="home-search-library"><a href=""><i class="fa-regular fa-bookmark"></i>Your Episodes</a>
+                </div>
+            </ul>
+            <hr id="sidebar-hr">
+        </div>
+        <div id="main" class="main">
+            <div id="topbar" class="topbar">
+                <div id="main-left">
+                    <a href=""><i class="fa-solid fa-angle-left"></i></a>
+                    <a href=""><i class="fa-solid fa-angle-right"></i></a>
+                </div>
+                <div id="main-right">
+                    <a href=""><button id="upgrade">Upgrade</button></a>
+                    <div class="dropdown">
+                        <span class="user"><img class="user-icon" src="user.jpg" alt="User">Aviral<i
+                                class="fa-solid fa-caret-down"></i>
+                            <div class="sub-menu">
+                                <ul>
+                                    <li><a href="">Account<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </li>
+                                    <li><a href="">Profile</a></li>
+                                    <li><a href="">Upgrade to Premium<i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                                    <li><a href="">Support<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </li>
+                                    <li><a href="">Download<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </li>
+                                    <li><a href="">Settings</a></li>
+                                    <hr>
+                                    <li><a href="">Log out</a></li>
+                                </ul>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="greet">
+                <h4><span id="time-of-day"></span></h4>
+            </div>
+            <div class="music">
+                <div class="recent">
+                    <div class="recent-box" id="recent-1">
+                        <div class="recent-left"><img class="cover-recent" src="coverart\space.png" alt="Space"><span
+                                id="recent-box-text" style="font-weight: bold;">Space</span></div>
+                        <div class="recent-right"><a href=""><i class="fa-solid fa-circle-play"></i></a></div>
+                    </div>
+                    <div class="recent-box" id="recent-2">
+                        <div class="recent-left"><img class="cover-recent" src="coverart\gunkali.jpg"
+                                alt="Gunkali"><span id="recent-box-text" style="font-weight: bold;">Gunkali</span></div>
+                        <div class="recent-right"><a href=""><i class="fa-solid fa-circle-play"></i></a></div>
+                    </div>
+                    <div class="recent-box" id="recent-3">
+                        <div class="recent-left"><img class="cover-recent" src="coverart\osho jain.jpg"
+                                alt="Osho Jain"><span id="recent-box-text" style="font-weight: bold;">Osho Jain</span>
+                        </div>
+                        <div class="recent-right"><a href=""><i class="fa-solid fa-circle-play"></i></a></div>
+                    </div>
+                    <div class="recent-box" id="recent-4">
+                        <div class="recent-left"><img class="cover-recent" src="coverart\duster.jpg" alt="Duster"><span
+                                id="recent-box-text" style="font-weight: bold;">Duster</span></div>
+                        <div class="recent-right"><a href=""><i class="fa-solid fa-circle-play"></i></a></div>
+                    </div>
+                    <div class="recent-box" id="recent-5">
+                        <div class="recent-left"><img class="cover-recent" src="coverart\eye-i.jpg" alt="Eye/I"><span
+                                id="recent-box-text" style="font-weight: bold;">Eye/I</span></div>
+                        <div class="recent-right"><a href=""><i class="fa-solid fa-circle-play"></i></a></div>
+                    </div>
+                    <div class="recent-box" id="recent-6">
+                        <div class="recent-left"><img class="cover-recent" src="coverart\kaavish.jpg"
+                                alt="Kaavish Mix"><span id="recent-box-text" style="font-weight: bold;">Kaavish
+                                Mix</span></div>
+                        <div class="recent-right"><a href=""><i class="fa-solid fa-circle-play"></i></a></div>
+                    </div>
+                </div>
+                <div class="your-fav-artists">
+                    <div class="your-fav-artists-header">
+                        <a href="">
+                            <h5>Your favorite artists</h5>
+                        </a>
+                        <a href="">
+                            SHOW ALL<i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="your-fav-artists-profile-container">
+                        <div class="your-fav-artists-profile" id="your-fav-artists-profile-1"><img
+                                src="coverart\phosphenes.jpg" alt="Phosphenes" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Phosphenes</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="your-fav-artists-profile-2"><img
+                                src="coverart\osho jain.jpg" alt="Osho Jain" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Osho Jain</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="your-fav-artists-profile-3"><img
+                                src="coverart\wabiisabii.png" alt="Wabiisabii" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Wabiisabii</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="your-fav-artists-profile-4"><img
+                                src="coverart\kaavish.jpg" alt="Kaavish" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Kaavish</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="your-fav-artists-profile-5"><img
+                                src="coverart\Asthir Album Art Front Cover.jpg" alt="Panhelo Batti Muni"
+                                class="your-fav-artists-profile-pfp"><a href=""><i
+                                    class="fa-solid fa-circle-play"></i></a>
+                            <h6>Panhelo Batti Muni</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="your-fav-artists-profile-6"><img
+                                src="coverart\Bharatchauhan.png" alt="Bharat Chauhan"
+                                class="your-fav-artists-profile-pfp"><a href=""><i
+                                    class="fa-solid fa-circle-play"></i></a>
+                            <h6>Bharat Chauhan</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="your-fav-artists-profile-7"><img
+                                src="coverart\bartika.jpg" alt="Bartika Eam Rai" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Bartika Eam Rai</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="your-fav-artists-profile-8"><img
+                                src="coverart\young-stunners.png" alt="Young Stunners"
+                                class="your-fav-artists-profile-pfp"><a href=""><i
+                                    class="fa-solid fa-circle-play"></i></a>
+                            <h6>Young Stunners</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="your-fav-artists-profile-9"><img
+                                src="coverart\frank-ocean.jpg" alt="Frank Ocean" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Frank Ocean</h6>
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="your-fav-artists">
+                    <div class="your-fav-artists-header">
+                        <a href="">
+                            <h5>More Like Phosphenes</h5>
+                        </a>
+                        <a href="">
+                            SHOW ALL<i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="your-fav-artists-profile-container">
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-1"><img
+                                src="coverart\phosphenes.jpg" alt="Phosphenes" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Phosphenes</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-2"><img
+                                src="coverart\osho jain.jpg" alt="Osho Jain" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Osho Jain</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-3"><img
+                                src="coverart\wabiisabii.png" alt="Wabiisabii" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Wabiisabii</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-4"><img
+                                src="coverart\kaavish.jpg" alt="Kaavish" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Kaavish</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-5"><img
+                                src="coverart\Asthir Album Art Front Cover.jpg" alt="Panhelo Batti Muni"
+                                class="your-fav-artists-profile-pfp"><a href=""><i
+                                    class="fa-solid fa-circle-play"></i></a>
+                            <h6>Panhelo Batti Muni</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-6"><img
+                                src="coverart\Bharatchauhan.png" alt="Bharat Chauhan"
+                                class="your-fav-artists-profile-pfp"><a href=""><i
+                                    class="fa-solid fa-circle-play"></i></a>
+                            <h6>Bharat Chauhan</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-7"><img
+                                src="coverart\bartika.jpg" alt="Bartika Eam Rai" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Bartika Eam Rai</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-8"><img
+                                src="coverart\young-stunners.png" alt="Young Stunners"
+                                class="your-fav-artists-profile-pfp"><a href=""><i
+                                    class="fa-solid fa-circle-play"></i></a>
+                            <h6>Young Stunners</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-9"><img
+                                src="coverart\frank-ocean.jpg" alt="Frank Ocean" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Frank Ocean</h6>
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="your-fav-artists">
+                    <div class="your-fav-artists-header">
+                        <a href="">
+                            <h5>Recently Played</h5>
+                        </a>
+                        <a href="">
+                            SHOW ALL<i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="your-fav-artists-profile-container">
+                        <div class="your-fav-artists-profile recently-played-profile" id="your-fav-artists-profile-1">
+                            <img src="coverart\phosphenes.jpg" alt="Phosphenes" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Phosphenes</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-2"><img
+                                src="coverart\osho jain.jpg" alt="Osho Jain" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Osho Jain</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-3"><img
+                                src="coverart\wabiisabii.png" alt="Wabiisabii" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Wabiisabii</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-4"><img
+                                src="coverart\kaavish.jpg" alt="Kaavish" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Kaavish</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-5"><img
+                                src="coverart\Asthir Album Art Front Cover.jpg" alt="Panhelo Batti Muni"
+                                class="your-fav-artists-profile-pfp"><a href=""><i
+                                    class="fa-solid fa-circle-play"></i></a>
+                            <h6>Panhelo Batti Muni</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-6"><img
+                                src="coverart\Bharatchauhan.png" alt="Bharat Chauhan"
+                                class="your-fav-artists-profile-pfp"><a href=""><i
+                                    class="fa-solid fa-circle-play"></i></a>
+                            <h6>Bharat Chauhan</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-7"><img
+                                src="coverart\bartika.jpg" alt="Bartika Eam Rai" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Bartika Eam Rai</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-8"><img
+                                src="coverart\young-stunners.png" alt="Young Stunners"
+                                class="your-fav-artists-profile-pfp"><a href=""><i
+                                    class="fa-solid fa-circle-play"></i></a>
+                            <h6>Young Stunners</h6>
+                            <p>Artist</p>
+                        </div>
+                        <div class="your-fav-artists-profile" id="more-like-artists-profile-9"><img
+                                src="coverart\frank-ocean.jpg" alt="Frank Ocean" class="your-fav-artists-profile-pfp"><a
+                                href=""><i class="fa-solid fa-circle-play"></i></a>
+                            <h6>Frank Ocean</h6>
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="your-fav-artists">
+                    <div class="your-fav-artists-header">
+                        <a href="">
+                            <h5>Your Shows</h5>
+                        </a>
+                        <a href="">
+                            SHOW ALL<i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="your-fav-artists-profile-container">
+                        <div class="your-fav-artists-profile your-shows-profile" id="your-fav-artists-profile-1"><img
+                                src="books\atomic habits.jpg" alt="Phosphenes" class="your-shows-pfp">
+                            <h6>Atomic Habits</h6>
+                            <p>James Clear</p>
+                        </div>
+                        <div class="your-fav-artists-profile your-shows-profile" id="your-fav-artists-profile-2"><img
+                                src="books\IT-ENDS-WITH-US-promo-b.jpg" alt="Osho Jain" class="your-shows-pfp">
+                            <h6>It Ends with Us</h6>
+                            <p>Colleen Hoover</p>
+                        </div>
+                        <div class="your-fav-artists-profile your-shows-profile" id="your-fav-artists-profile-3"><img
+                                src="books\itstartswithus.jpeg" alt="Wabiisabii" class="your-shows-pfp">
+                            <h6>It Starts with Us</h6>
+                            <p>Colleen Hoover</p>
+                        </div>
+                        <div class="your-fav-artists-profile your-shows-profile" id="your-fav-artists-profile-4"><img
+                                src="books\Romeo and Juliet—Together (And Alive!) At Last Cover.jpg" alt="Kaavish"
+                                class="your-shows-pfp">
+                            <h6>Romeo and Juliet</h6>
+                            <p>William Shakespeare</p>
+                        </div>
+                        <div class="your-fav-artists-profile your-shows-profile" id="your-fav-artists-profile-5"><img
+                                src="books\subtle-art.jpg" alt="Panhelo Batti Muni" class="your-shows-pfp">
+                            <h6 style="text-align: center;">The Subtle Art of
+                                <br>
+                                Not Giving A F*ck
+                            </h6>
+                            <p>Mark Manson</p>
+                        </div>
+                    </div>
+                    <div class="extra-ht-bottom"></div>
+                </div>
+            </div>
+        </div>
+        <div class="music-player-positioning">
+            <div class="music-player" id="musicplayer">
+
+                <div class="music-player-left">
+                    <button class="artwork" id="artisttinformationclick">
+                    <div class="song-info" id="songinfo">
+                        <img src="coverart\gumaan.png" alt="Cover" id="coverart">
+                        <div class="like-n-artist">
+                            <div class="artist-info-player" id="artist-info-player">
+                                <h6>Gumaan</h6>
+                                <a href="">
+                                    <p title="Artist">Young Stunners</p>
+                                </a>
+                            </div>
+                            <div id="like-container"><i class="fa-solid fa-heart" id="like" title="like"></i></div>
+                        </div>
+                    </div>
+                </button>
+                </div>
+                <div class="music-player-center">
+                    <div class="music-controls">
+                        <i class="fa-solid fa-shuffle" id="shuffle" title="shuffle"></i>
+                        <i class="fa-solid fa-backward-step" title="previous"></i>
+                        <div id="play_pause">
+                            <button id="playpausebtn">
+                        <i class="fa-solid fa-circle-play" title="play"></i>
+                    </button>
+                    </div>
+                        <i class="fa-solid fa-forward-step" title="next"></i>
+                        <i class="fa-solid fa-repeat" id="repeat" title="repeat"></i>
+                    </div>
+                    <div id="progresscontainer"><span id="current-time"></span>
+                    <div class="progress-bar" id="progress-bar">
+                        <div class="progress" id="progress"></div>
+                      </div>
+                      <span id="duration"></span>
+                    </div>
+                </div>
+                <div class="music-player-right">
+                    <i class="fa-solid fa-music" title="Lyrics"></i>
+                    <i class="fa-solid fa-headphones" title="Devices"></i>
+                    <i class="fa-solid fa-list" title="Queue"></i>
+                    <button id="volume-container">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+                    <input type="range" name="Volume" id="volume" value="50" min="0" max="100"
+                        onChange="change();"><span id="vol-result"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
